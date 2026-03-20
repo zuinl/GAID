@@ -68,13 +68,13 @@ As Funções do GAID devem ser rotativas, portanto é recomendado que a cada nov
 
 _**IMPORTANTE:** na metodologia GAID, usamos as Funções como guias para recomendar organização de atribuições e responsabilidades do time. Mas o GAID **não incentiva** mudanças disruptivas na cultura do time, como cerimônias e reuniões pré existentes. Em outras palavras: quando dizemos, por exemplo, que na Etapa 2 deve participar o Roteirista de Testes, isso **não significa que apenas ele cuidará da etapa**. A regra de ouro que segue valendo é: o GAID é agnóstico e deve se adaptar à cultura atual do time._
 
-### Planejador da Implementação
+### Planejador da Implementação (_Implementation Planner_)
 
 - Planeja e documenta os requisitos da implementação de acordo com as regras de negócio. Garante que a arquitetura e boas práticas definidas pelo time sejam seguidas;
 - Atua como protagonista na Etapa 1;
 - Presença obrigatória na Etapa 6.
 
-### Roteirista de Testes
+### Roteirista de Testes (_Test Planner_)
 
 - Planeja e escreve as suítes e casos de teste da implementação;
 - Atua como protagonista nas Etapas 2 e 3;
@@ -86,7 +86,7 @@ _**IMPORTANTE:** na metodologia GAID, usamos as Funções como guias para recome
 - Atua como protagonista na Etapa 4;
 - Presença obrigatória nas Etapas 1, 2 e 6.
 
-### Validador de Saída
+### Validador de Saída (_Output Validator_)
 
 - Revisa e valida a saída de artefatos gerados por agentes de IA (documentos, código);
 - Nunca deve ser Validador de Saída;

@@ -93,9 +93,10 @@ _**IMPORTANTE:** na metodologia GAID, usamos as Funções como guias para recome
 - Atua como protagonista na Etapa 5;
 - Presença obrigatória nas Etapas 1, 2 e 6.
 
-<img src="./DIAGRAM_GAID.png" alt="GAID Diagram">
 
 ## Etapas do GAID
+
+<img src="./DIAGRAM_GAID.png" alt="GAID Diagram">
 
 ### 1. Domínio e Planejamento Técnico Humano (*Human Domain and Planning*)
 

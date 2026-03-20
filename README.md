@@ -93,9 +93,7 @@ _**IMPORTANTE:** na metodologia GAID, usamos as Funções como guias para recome
 - Atua como protagonista na Etapa 5;
 - Presença obrigatória nas Etapas 1, 2 e 6.
 
-## Revisão Adversarial
-
-TODO
+<img src="./DIAGRAM_GAID.png" alt="GAID Diagram">
 
 ## Etapas do GAID
 
@@ -236,3 +234,7 @@ O time deve considerar a etapa de *Feedback Loop* concluída quando:
 
 - após o registro de uma solicitação de mudança ou de um *bug* encontrado, o time técnico compreendeu o que é preciso ser alterado;
 - com o entendimento tácito da mudança, o time deve iniciar o tratamento da mudança pela etapa 2 do GAID.
+
+## Revisão Adversarial
+
+TODO

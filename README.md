@@ -66,7 +66,7 @@ As Funções do GAID servem para elucidar as responsabilidades de cada membro do
 
 As Funções do GAID devem ser rotativas, portanto é recomendado que a cada nova implementação planejada, o time realize um rodízio das atribuições anteriores.
 
-**IMPORTANTE:** na metodologia GAID, usamos as Funções como guias para recomendar organização de atribuições e responsabilidades do time. Mas o GAID **não incentiva** mudanças disruptivas na cultura do time, como cerimônias e reuniões pré existentes. Em outras palavras: quando dizemos, por exemplo, que na Etapa 2 deve participar o Roteirista de Testes, isso **não significa que apenas ele cuidará da etapa**. A regra de ouro que segue valendo é: o GAID é agnóstico e deve se adaptar à cultura atual do time.
+_**IMPORTANTE:** na metodologia GAID, usamos as Funções como guias para recomendar organização de atribuições e responsabilidades do time. Mas o GAID **não incentiva** mudanças disruptivas na cultura do time, como cerimônias e reuniões pré existentes. Em outras palavras: quando dizemos, por exemplo, que na Etapa 2 deve participar o Roteirista de Testes, isso **não significa que apenas ele cuidará da etapa**. A regra de ouro que segue valendo é: o GAID é agnóstico e deve se adaptar à cultura atual do time._
 
 ### Planejador da Implementação
 

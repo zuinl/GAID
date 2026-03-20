@@ -93,6 +93,21 @@ _**IMPORTANTE:** na metodologia GAID, usamos as Funções como guias para recome
 - Atua como protagonista na Etapa 5;
 - Presença obrigatória nas Etapas 1, 2 e 6.
 
+## _Git flow_ sugerido
+
+<img src="./FLOW_GAID.png" alt="GAID Suggested Gitflow">
+
+Este diagrama representa o fluxo **sugerido** de Git Flow para projetos que adotarem o GAID, pensando de forma a permitir o trabalho isolado das Etapas do GAID.
+
+1. Branch `feature/{feature_name}` partindo do ambiente de desenvolvimento do projeto (aqui chamado de `develop`). Esta branch será a centralizadora de todas as Etapas e só voltará para a `develop` após todas as Etapas finalizadas;
+2. Branch `test/tests-{feature_name}` partindo da branch centralizadora `feature/{feature_name}`. Nela devem ser implementados os testes previamente planejados pelo time;
+3. Branch `test/tests-{feature_name}` volta para a `feature/{feature_name}` após escrita dos testes e validação via _code review_. A branch de teste pode ser excluída após esse _merge_;
+4. Branch `feature/implement-{feature_name}` partindo da centralizadora `feature/{feature_name}`. Nela será feita a implementação geral com uso de agentes de IA;
+5. Branch `feature/implement-{feature_name}` volta para a centralizadora `feature/{feature_name}` após implementação e validação via _code review_. A branch de implementação pode ser excluída após esse _merge_;
+6. Branch centralizadora `feature/{feature_name}` volta para a `develop` após todas as Etapas do GAID finalizadas, representando o fechamento de um ciclo da metodologia.
+
+_**IMPORTANTE:** seguindo as diretrizes do Pilar 3, o GAID é agnóstico, portanto o time de desenvolvedores pode aplicar o fluxo de organização de branches de acordo suas necessidades específicas._
+
 
 ## Etapas do GAID
 

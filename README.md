@@ -55,10 +55,10 @@ O uso de *Flags* de Autonomia Assistida estabelece uma classificação clara do 
 
 | Nível | Descrição |
 | --- | --- |
-| Nível 0 - Manual | IA totalmente ausente |
-| Nível 1 - Consulta | IA usada para pesquisa/estudo. O código é 100% humano |
-| Nível 2 - Coprodução | IA gera rascunhos e sugestões sob supervisão constante |
-| Nível 3 - Execução assistida | IA gera o artefato final com base em testes. Revisão humana obrigatória |
+| 🔴 Nível 0 - Manual | IA totalmente ausente |
+| 🟠 Nível 1 - Consulta | IA usada para pesquisa/estudo. O código é 100% humano |
+| 🔵 Nível 2 - Coprodução | IA gera rascunhos e sugestões sob supervisão constante |
+| 🟢 Nível 3 - Execução assistida | IA gera o artefato final com base em testes. Revisão humana obrigatória |
 
 ## 👥 Funções no GAID
 
@@ -66,7 +66,15 @@ As Funções do GAID servem para elucidar as responsabilidades de cada membro do
 
 As Funções do GAID devem ser rotativas, portanto é recomendado que a cada nova implementação planejada, o time realize um rodízio das atribuições anteriores.
 
-### Roteiristas de Testes
+**IMPORTANTE:** na metodologia GAID, usamos as Funções como guias para recomendar organização de atribuições e responsabilidades do time. Mas o GAID **não incentiva** mudanças disruptivas na cultura do time, como cerimônias e reuniões pré existentes. Em outras palavras: quando dizemos, por exemplo, que na Etapa 2 deve participar o Roteirista de Testes, isso **não significa que apenas ele cuidará da etapa**. A regra de ouro que segue valendo é: o GAID é agnóstico e deve se adaptar à cultura atual do time.
+
+### Planejador da Implementação
+
+- Planeja e documenta os requisitos da implementação de acordo com as regras de negócio. Garante que a arquitetura e boas práticas definidas pelo time sejam seguidas;
+- Atua como protagonista na Etapa 1;
+- Presença obrigatória na Etapa 6.
+
+### Roteirista de Testes
 
 - Planeja e escreve as suítes e casos de teste da implementação;
 - Atua como protagonista nas Etapas 2 e 3;
@@ -85,15 +93,21 @@ As Funções do GAID devem ser rotativas, portanto é recomendado que a cada nov
 - Atua como protagonista na Etapa 5;
 - Presença obrigatória nas Etapas 1, 2 e 6.
 
+## Revisão Adversarial
+
+TODO
+
 ## Etapas do GAID
 
 ### 1. Domínio e Planejamento Técnico Humano (*Human Domain and Planning*)
 
-**Nível de Autonomia:** Nível 1 - Consulta
+**Nível de Autonomia:** 🟠 Nível 1 - Consulta
 
-**Quem atua?** Todo o time de humanos e IA
+**Protagonista:** Planejador da Implementação
 
-### Objetivos da etapa
+**Quem participa?** Planejador da Implementação, Roteirista de Testes, _Prompter_ e Validador de Saída
+
+**Objetivos da Etapa 1**
 
 - Garantir que todo o time compreenda:
     - o objetivo (”o quê”) da implementação;
@@ -103,113 +117,120 @@ As Funções do GAID devem ser rotativas, portanto é recomendado que a cada nov
 - Planejar e documentar a arquitetura da implementação: essencial para que os desenvolvedores escrevam seus *prompts* para IA;
 - Aplicar o conceito de Revisão Adversarial para os requisitos e planejamentos realizados.
 
-### Definição de pronto da Etapa 1
+**Definição de pronto da Etapa 1**
 
 O time deve considerar a etapa de Domínio e Planejamento Técnico Humano concluída quando:
 
 - todos forem capazes de compreender o objetivo, justificativa e relevância da implementação proposta;
 - existir uma lista de requisitos claros e compreensíveis por todos os desenvolvedores;
-- os Papéis do GAID necessários para a implementação estão definidos;
+- as Funções do GAID necessárias para a implementação estão definidos;
 - foi feita a Revisão Adversarial com IA;
-- a arquitetura proposta está documentada e compreendida por todos;
+- a arquitetura proposta está documentada e compreendida por todos.
 
-## 2. Planejamento Humano de Testes (*Human Planning Tests*)
+### 2. Planejamento Humano de Testes (*Human Planning Tests*)
 
-**Nível de Autonomia:** Nível 1 - Consulta
+**Nível de Autonomia:** 🟠 Nível 1 - Consulta
 
-**Quem atua?** Roteirista de Testes
+**Protagonista:** Roteirista de Testes
 
-### Objetivos da etapa
+**Quem participa?** Roteirista de Testes
+
+**Objetivos da Etapa 2**
 
 - Planejar as suítes de testes que serão criadas, considerando os possíveis cenários e casos de teste;
 - Considerar os principais cenários de uso, caminhos alternativos e casos de borda da aplicação.
 
-### Definição de pronto da Etapa 2
+**Definição de pronto da Etapa 2**
 
 O time deve considerar a etapa de Planejamento Humano de Testes concluída quando:
 
 - toda a arquitetura planejada na Etapa 1 tiver casos de teste devidamente planejados;
-- houver documentação das suítes e casos de testes planejados, a fim de serem usados na escrita e revisão deles.
+- houver documentação das suítes e casos de testes planejados, a fim de serem usados na escrita e revisão deles;
+- os testes escritos foram validados pelos outros membros a fim de detecção de _gaps_ e inconsistências.
 
-## 3. Escrita e Validação Humana de Testes (*Human Writing and Validating Tests*)
+### 3. Escrita e Validação Humana de Testes (*Human Writing and Validating Tests*)
 
-**Nível de Autonomia:** Nível 1 - Consulta
+**Nível de Autonomia:** 🟠 Nível 1 - Consulta
 
-**Quem atua?** Roteirista de Testes
+**Protagonista:** Roteirista de Testes
 
-### **Quem atua?**
+**Quem participa?** Roteirista de Testes
 
-Apenas o time de desenvolvedores humanos.
-
-### Objetivos da etapa
+**Objetivos da Etapa 3**
 
 - Escrever os testes planejados na etapa anterior, usando as bibliotecas e arquitetura definidas pelo time;
 - Validar os testes escritos (*code review*) com base no que foi planejado.
 
-### Definição de pronto da Etapa 3
+**Definição de pronto da Etapa 3**
 
 O time deve considerar a etapa de Escrita e Validação Humana de Testes concluída quando:
 
 - os testes previamente planejados na Etapa 2 estiverem desenvolvidos e organizados no repositório de acordo com a arquitetura padrão do time;
 - os testes terem sido validados via processo de *code review* do time.
 
-## 4. Implementação de Código com IA (*AI Code Implementation)*
+### 4. Implementação de Código com IA (*AI Code Implementation)*
 
-**Nível de Autonomia:** Nível 3 - Consulta
+**Nível de Autonomia:** 🟢 Nível 3 - Execução Assistida
 
-**Quem atua?** Prompter e IA
+**Protagonista:** _Prompter_
 
-### Objetivos da etapa
+**Quem participa?** _Prompter_
+
+**Objetivos da Etapa 4**
 
 - Implementação principal (codificação) da demanda;
 - utilizar agente de IA para a codificação, tendo como leis os testes previamente planejados e escritos;
 - Refatorar e reorganizar, quando preciso, o código gerado pelo agente de IA;
 - testar a implementação final e enviar para revisão do time.
 
-### Definição de pronto da Etapa 4
+**Definição de pronto da Etapa 4**
 
 O time deve considerar a etapa de Implementação de Código com IA concluída quando:
 
 - todos os testes previamente planejados e escritos passam com sucesso após implementação do agente de IA;
-- o(s) desenvolvedor(es) humano(s) revisaram e, se necessário, refinaram o código gerado pela IA para atender aos parâmetros de boas práticas e arquiteturas definidas pelo time;
+- os desenvolvedores humanos revisaram e, se necessário, refinaram o código gerado pela IA para atender aos parâmetros de boas práticas e arquiteturas definidas pelo time;
 - a implementação final funciona em ambiente de testes atendendo aos critérios de aceitação definido pelo time de negócios;
 - existe *Pull Request* criada e documentada de forma a permitir a revisão do código pelo time.
 
-## 5. Validação Humana de Código (*Human Code Validation*)
+### 5. Validação Humana de Código (*Human Code Validation*)
 
-**Nível de Autonomia:** Nível 0 - Manual
+**Nível de Autonomia:** 🔴 Nível 0 - Manual
 
-**Quem atua?** Validador de saída
+**Protagonista:** Validador de Saída
 
-### Objetivos da etapa
+**Quem participa?** Planejador da Implementação e Validador de Saída.
+
+**Objetivos da Etapa 5**
 
 - Revisar todo o código gerado pelo agente de IA;
-- Garantir a conformidade com os parâmetros de arquitetura do projeto;
+- Garantir a conformidade com os parâmetros de arquitetura do projeto e planejamento realizado na Etapa 1;
 - Solicitar e aplicar, quando necessário, ajustes finais na implementação da demanda.
 
-### Definição de pronto da Etapa 5
+**Definição de pronto da Etapa 5**
 
 O time deve considerar a etapa de Validação Humana de Código concluída quando:
 
-- todo o código criado pelo agente de IA sob monitoramento dos desenvolvedores foi revisado pelos responsáveis técnicos do time;
+- todo o código criado pelo agente de IA sob monitoramento dos desenvolvedores foi revisado pelo do time;
 - o código que está entrando na base principal do repositório segue os parâmetros de arquitetura, boas práticas e performances existentes do projeto;
 - a implementação final funciona e atende aos critérios de aceitação definidos pelo time de negócio.
 
-## 6. *Feedback Loop*
+### 6. *Feedback Loop*
 
-A etapa de *Feedback Loop* visa atender às eventuais necessidades de mudanças e/ou *bugs* após o processo inicial de desenvolvimento (Etapas 1 a 5). Em resumo, esta etapa tem por objetivo garantir o entendimento da nova necessidade e levar o time à Etapa 2 para o tratamento do caso.
+A etapa de *Feedback Loop* visa atender às eventuais necessidades de mudanças e/ou *bugs* após o processo inicial de desenvolvimento (Etapas 1 a 5). Em resumo, esta etapa tem por objetivo garantir o entendimento da nova necessidade e devolver o time à Etapa 2 para o tratamento do caso.
 
-**Nível de Autonomia:** Nível 2 - Coprodução
+**Nível de Autonomia:** 🔵 Nível 2 - Coprodução
 
-**Quem atua?** O time de humanos e IA
+**Protagonista:** Planejador da Implementação
 
-### Objetivos da etapa
+**Quem participa?** Planejador da Implementação
+
+**Objetivos da Etapa 6**
 
 - Direcionar corretamente as eventuais mudanças e/ou *bugs* que surjam após o desenvolvimento inicial;
 - Garantir a circularidade do processo do GAID, onde toda iteração no repositório seja devidamente governada;
 - Fazer uso de agentes de IA para reprodução local de problemas, resumo e tradução técnica de documentos de mudança e até como diagnosticadora do problema raiz.
 
-### Definição de pronto da Etapa 6
+**Definição de pronto da Etapa 6**
 
 O time deve considerar a etapa de *Feedback Loop* concluída quando:
 
